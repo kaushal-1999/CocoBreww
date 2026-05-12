@@ -1,61 +1,242 @@
-.about-section{
-background:#120b08;
-padding:120px 0;
-}
-.about-container{
-width:92%;
-max-width:1400px;
-margin:auto;
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:50px;
-align-items:center;
-}
-.section-tag{
-background:rgba(255,255,255,0.06);
-color:#ffb347;
-padding:10px 18px;
-border-radius:50px;
-}
-.about-left h2{
-color:white;
-font-size:3rem;
-margin:25px 0;
-}
-.about-left p{
-color:#c8b8ab;
-line-height:1.9;
-}
-.about-features{
-margin-top:40px;
-display:flex;
-flex-direction:column;
-gap:20px;
-}
-.feature-card{
-display:flex;
-gap:20px;
-align-items:center;
-padding:22px;
-background:rgba(255,255,255,0.04);
-border-radius:24px;
-color:white;
-transition:.4s ease;
-}
-.feature-card:hover{
-transform:translateY(-8px);
-}
-.feature-card svg{
-color:#ff9d00;
-font-size:2rem;
-}
-.about-box{
-padding:40px;
-border-radius:30px;
-background:rgba(255,255,255,0.05);
-color:white;
+.about-section {
+    background: #120b08;
+
+    padding: 120px 0;
+
+    overflow: hidden;
 }
 
-.glow-box{
-box-shadow:0 0 40px rgba(255,123,0,0.18);
+/* ================= CONTAINER ================= */
+
+.about-container {
+    width: 92%;
+    max-width: 1400px;
+
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 50px;
+    align-items: center;
+}
+
+/* ================= LEFT ================= */
+
+.section-tag {
+    display: inline-block;
+
+    background: rgba(255, 255, 255, 0.06);
+
+    color: #ffb347;
+
+    padding: 10px 18px;
+
+    border-radius: 50px;
+
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.about-left h2 {
+    color: white;
+
+    font-size: 3rem;
+    line-height: 1.2;
+
+    margin: 25px 0;
+}
+
+.about-left p {
+    color: #c8b8ab;
+
+    line-height: 1.9;
+
+    font-size: 1rem;
+}
+
+/* ================= FEATURES ================= */
+
+.about-features {
+    margin-top: 40px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+.feature-card {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+
+    padding: 22px;
+
+    background: rgba(255, 255, 255, 0.04);
+
+    border-radius: 24px;
+
+    color: white;
+
+    transition: .4s ease;
+
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.feature-card svg {
+    color: #ff9d00;
+
+    font-size: 2rem;
+
+    flex-shrink: 0;
+}
+
+.feature-card h4 {
+    margin-bottom: 8px;
+
+    font-size: 1.1rem;
+}
+
+.feature-card p {
+    color: #c8b8ab;
+
+    line-height: 1.7;
+
+    font-size: 0.95rem;
+}
+
+/* ================= RIGHT ================= */
+
+.about-right {
+    display: flex;
+    flex-direction: column;
+
+    gap: 25px;
+}
+
+.about-box {
+    padding: 40px;
+
+    border-radius: 30px;
+
+    background: rgba(255, 255, 255, 0.05);
+
+    color: white;
+
+    border: 1px solid rgba(255, 255, 255, 0.06);
+
+    transition: .4s ease;
+}
+
+.about-box:hover {
+    transform: translateY(-8px);
+}
+
+.about-box h3 {
+    font-size: 1.8rem;
+
+    margin-bottom: 15px;
+
+    color: #ffb347;
+}
+
+.about-box p {
+    color: #d1c0b3;
+
+    line-height: 1.8;
+}
+
+.glow-box {
+    box-shadow: 0 0 40px rgba(255, 123, 0, 0.18);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:1100px) {
+
+    .about-container {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    .about-left {
+        text-align: center;
+    }
+
+    .about-right {
+        width: 100%;
+    }
+
+}
+
+@media(max-width:768px) {
+
+    .about-section {
+        padding: 90px 0;
+    }
+
+    .about-left h2 {
+        font-size: 2.4rem;
+    }
+
+    .feature-card {
+        padding: 20px;
+
+        gap: 16px;
+    }
+
+    .feature-card svg {
+        font-size: 1.7rem;
+    }
+
+    .about-box {
+        padding: 30px;
+    }
+
+    .about-box h3 {
+        font-size: 1.5rem;
+    }
+
+}
+
+@media(max-width:500px) {
+
+    .about-section {
+        padding: 70px 0;
+    }
+
+    .about-container {
+        width: 94%;
+    }
+
+    .about-left h2 {
+        font-size: 2rem;
+    }
+
+    .about-left p {
+        font-size: 0.95rem;
+    }
+
+    .feature-card {
+        flex-direction: column;
+        text-align: left;
+    }
+
+    .feature-card svg {
+        font-size: 1.6rem;
+    }
+
+    .about-box {
+        padding: 24px;
+        border-radius: 24px;
+    }
+
 }
