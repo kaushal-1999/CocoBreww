@@ -1,25 +1,76 @@
-import logo from './logo.svg';
-import './App.css';
+import {
+  BrowserRouter,
+  Routes,
+  Route
+} from "react-router-dom";
+
+import Layout from "./layout/Layout";
+
+import Home from "./pages/Home";
+import About from "./pages/About/AboutSection";
+// import Coffee from "./pages/Coffee";
+// import Tea from "./pages/Tea";
+import Products from "./pages/Products/ProductDetails";
+import Contact from "./pages/Contact/ContactSection";
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    <BrowserRouter>
+
+      <Routes>
+
+        {/* COMMON NAVBAR + FOOTER */}
+        <Route path="/" element={<Layout />}>
+
+          {/* HOME */}
+          <Route
+            index
+            element={<Home />}
+          />
+
+          {/* ABOUT */}
+          <Route
+            path="about"
+            element={<About />}
+          />
+
+          {/* COFFEE */}
+          {/* 
+          <Route
+            path="coffee"
+            element={<Coffee />}
+          />
+          */}
+
+          {/* TEA */}
+          {/* 
+          <Route
+            path="tea"
+            element={<Tea />}
+          />
+          */}
+
+          {/* PRODUCTS */}
+          <Route
+            path="products"
+            element={<Products />}
+          />
+
+          {/* CONTACT */}
+          <Route
+            path="contact"
+            element={<Contact />}
+          />
+
+        </Route>
+
+      </Routes>
+
+    </BrowserRouter>
+
+  )
 }
 
 export default App;

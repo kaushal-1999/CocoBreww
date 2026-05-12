@@ -1,0 +1,109 @@
+.tea-section {
+    padding: 120px 0;
+    background: #140c08;
+}
+
+.tea-header {
+    text-align: center;
+    width: 90%;
+    max-width: 850px;
+    margin: auto auto 70px;
+}
+
+.tea-header span {
+    color: #ffb347;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+.tea-header h2 {
+    color: white;
+    font-size: 3.5rem;
+    margin: 20px 0;
+}
+
+.tea-header p {
+    color: #cab8aa;
+    line-height: 1.9;
+}
+
+.tea-grid {
+    width: 92%;
+    max-width: 1400px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.tea-card {
+    position: relative;
+    height: 420px;
+    border-radius: 32px;
+    overflow: hidden;
+    transition: .5s ease;
+}
+
+.tea-card:hover {
+    transform: translateY(-10px);
+}
+
+.tea-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .6s ease;
+}
+
+.tea-card:hover img {
+    transform: scale(1.1);
+}
+
+.tea-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top,
+            rgba(0, 0, 0, 0.9),
+            transparent 60%);
+    z-index: 1;
+}
+
+.tea-card-content {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    z-index: 2;
+}
+
+.tea-card-content h3 {
+    color: white;
+    font-size: 1.7rem;
+    margin-bottom: 18px;
+}
+
+.tea-card-content button {
+    padding: 14px 24px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #ff9d00, #ff5e00);
+    color: white;
+    cursor: pointer;
+    transition: .4s ease;
+}
+
+.tea-card-content button:hover {
+    transform: translateY(-5px);
+}
+
+@media(max-width:768px) {
+
+    .tea-header h2 {
+        font-size: 2.5rem;
+    }
+
+    .tea-card {
+        height: 350px;
+    }
+
+}

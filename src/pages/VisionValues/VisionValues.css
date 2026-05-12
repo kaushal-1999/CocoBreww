@@ -1,0 +1,59 @@
+.vision-section {
+    padding: 120px 0;
+    background: #120b07;
+}
+
+.vision-container {
+    width: 92%;
+    max-width: 1300px;
+
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 35px;
+}
+
+.vision-box {
+    padding: 50px;
+
+    border-radius: 35px;
+
+    background: linear-gradient(135deg,
+            rgba(255, 255, 255, 0.06),
+            rgba(255, 255, 255, 0.03));
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    transition: .4s ease;
+}
+
+.vision-box:hover {
+    transform: translateY(-10px);
+}
+
+.vision-box span {
+    color: #ffb347;
+}
+
+.vision-box h2 {
+    color: white;
+
+    font-size: 2.7rem;
+
+    margin: 20px 0;
+}
+
+.vision-box p {
+    color: #cbb9aa;
+    line-height: 1.9;
+}
+
+@media(max-width:900px) {
+
+    .vision-container {
+        grid-template-columns: 1fr;
+    }
+
+}

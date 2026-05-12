@@ -1,0 +1,260 @@
+.product-details-page {
+    position: relative;
+    overflow: hidden;
+    background: #0b0705;
+    padding: 120px 0;
+}
+
+/* ================= GLOW ================= */
+
+.product-glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: 0.25;
+}
+
+.glow-1 {
+    width: 350px;
+    height: 350px;
+    background: #ff7b00;
+    top: -120px;
+    left: -100px;
+}
+
+.glow-2 {
+    width: 320px;
+    height: 320px;
+    background: #ffb347;
+    bottom: -120px;
+    right: -100px;
+}
+
+/* ================= HEADER ================= */
+
+.product-header {
+    width: 90%;
+    max-width: 850px;
+    margin: auto auto 90px;
+    text-align: center;
+    position: relative;
+    z-index: 5;
+}
+
+.product-header span {
+    color: #ffb347;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+.product-header h1 {
+    color: white;
+    font-size: 4rem;
+    margin: 25px 0;
+}
+
+.product-header p {
+    color: #cab8aa;
+    line-height: 1.9;
+}
+
+/* ================= WRAPPER ================= */
+
+.products-wrapper {
+    width: 92%;
+    max-width: 1400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+    position: relative;
+    z-index: 5;
+}
+
+/* ================= CARD ================= */
+
+.product-detail-card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+    align-items: center;
+}
+
+.reverse-row .product-image-section {
+    order: 2;
+}
+
+.reverse-row .product-content-section {
+    order: 1;
+}
+
+/* ================= IMAGE ================= */
+
+.product-image-section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-bg-circle {
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    border-radius: 50%;
+    background: radial-gradient(circle,
+            rgba(255, 123, 0, 0.25),
+            transparent 70%);
+    animation: rotateCircle 12s linear infinite;
+}
+
+@keyframes rotateCircle {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.product-image-section img {
+    width: 100%;
+    max-width: 520px;
+    height: 550px;
+    object-fit: cover;
+    border-radius: 40px;
+    position: relative;
+    z-index: 5;
+    transition: .6s ease;
+    animation: floatImage 5s ease-in-out infinite;
+}
+
+.product-image-section img:hover {
+    transform: scale(1.04);
+}
+
+@keyframes floatImage {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* ================= CONTENT ================= */
+
+.product-tag {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.06);
+    color: #ffb347;
+    margin-bottom: 25px;
+}
+
+.product-content-section h2 {
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 25px;
+}
+
+.product-content-section p {
+    color: #c9b8aa;
+    line-height: 1.9;
+    margin-bottom: 35px;
+}
+
+/* ================= FEATURES ================= */
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    margin-bottom: 40px;
+}
+
+.feature-box {
+    padding: 18px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: white;
+    transition: .4s ease;
+}
+
+.feature-box:hover {
+    transform: translateY(-6px);
+    background: linear-gradient(135deg, #ff9d00, #ff5e00);
+}
+
+/* ================= BUTTON ================= */
+
+.product-btn {
+    padding: 16px 34px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #ff9d00, #ff5e00);
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: .4s ease;
+    box-shadow: 0 10px 25px rgba(255, 123, 0, 0.35);
+}
+
+.product-btn:hover {
+    transform: translateY(-6px);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:1100px) {
+
+    .product-detail-card {
+        grid-template-columns: 1fr;
+    }
+
+    .reverse-row .product-image-section {
+        order: 1;
+    }
+
+    .reverse-row .product-content-section {
+        order: 2;
+    }
+
+    .product-content-section {
+        text-align: center;
+    }
+
+}
+
+@media(max-width:768px) {
+
+    .product-header h1 {
+        font-size: 2.7rem;
+    }
+
+    .product-content-section h2 {
+        font-size: 2.2rem;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-image-section img {
+        height: 420px;
+    }
+
+    .image-bg-circle {
+        width: 300px;
+        height: 300px;
+    }
+
+}
