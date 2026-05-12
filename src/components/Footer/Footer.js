@@ -13,7 +13,6 @@ const Footer = () => {
   return (
     <footer className="footer">
 
-      {/* Glow Effects */}
       <div className="footer-glow footer-glow-1"></div>
       <div className="footer-glow footer-glow-2"></div>
 
@@ -39,11 +38,12 @@ const Footer = () => {
           </p>
 
           <div className="footer-socials">
-            <a href="#">
+            {/* Replace with real links */}
+            <a href="https://instagram.com" target="_blank" rel="noreferrer">
               <FaInstagram />
             </a>
 
-            <a href="#">
+            <a href="https://linkedin.com" target="_blank" rel="noreferrer">
               <FaLinkedinIn />
             </a>
 
@@ -60,8 +60,8 @@ const Footer = () => {
 
           <a href="/">Home</a>
           <a href="/about">About Us</a>
-          <a href="#coffee">Coffee</a>
-          <a href="#tea">Tea & Brew</a>
+          <a href="/#coffee">Coffee</a>
+          <a href="/#tea">Tea & Brew</a>
           <a href="/products">Products</a>
         </div>
 
@@ -69,11 +69,12 @@ const Footer = () => {
         <div className="footer-links">
           <h3>Products</h3>
 
-          <a href="#">Instant Coffee</a>
-          <a href="#">Agglomerated Coffee</a>
-          <a href="#">Freeze Dried Coffee</a>
-          <a href="#">Chocolate Premix</a>
-          <a href="#">Iced Tea Powder</a>
+          {/* Temporary safe links */}
+          <a href="/products#instant">Instant Coffee</a>
+          <a href="/products#agglomerated">Agglomerated Coffee</a>
+          <a href="/products#freeze">Freeze Dried Coffee</a>
+          <a href="/products#chocolate">Chocolate Premix</a>
+          <a href="/products#iced-tea">Iced Tea Powder</a>
         </div>
 
         {/* Contact */}
