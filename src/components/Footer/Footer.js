@@ -58,11 +58,11 @@ const Footer = () => {
         <div className="footer-links">
           <h3>Quick Links</h3>
 
-          <a href="#home">Home</a>
-          <a href="#about">About Us</a>
+          <a href="/">Home</a>
+          <a href="/about">About Us</a>
           <a href="#coffee">Coffee</a>
           <a href="#tea">Tea & Brew</a>
-          <a href="#products">Products</a>
+          <a href="/products">Products</a>
         </div>
 
         {/* Products */}
