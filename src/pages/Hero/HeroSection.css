@@ -161,7 +161,7 @@
 .hero-badge {
   width: fit-content;
 
-  padding: 12px 22px;
+  padding: 12px 15px;
 
   border-radius: 50px;
 
@@ -185,7 +185,7 @@
 .hero-left h1 {
   color: white;
 
-  font-size: 4.5rem;
+  font-size: 3.2rem;
   line-height: 1.08;
   font-weight: 800;
 

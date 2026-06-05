@@ -7,10 +7,10 @@ import {
 import Layout from "./layout/Layout";
 
 import Home from "./pages/Home";
-import About from "./pages/About/AboutSection";
+import About from "./pages/About/AboutPage";
 // import Coffee from "./pages/Coffee";
 // import Tea from "./pages/Tea";
-import Products from "./pages/Products/ProductDetails";
+import Products from "./pages/Products/ProductsPage";
 import Contact from "./pages/Contact/ContactSection";
 
 function App() {

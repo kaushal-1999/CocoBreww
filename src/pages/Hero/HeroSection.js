@@ -31,17 +31,22 @@ const HeroSection = () => {
             <FaCoffee />
             <span>Premium Coffee Since 2022</span>
           </div>
-
-          <h1>
+          {/* <h1>
             Crafting Quality
             <span> Coffee </span>
             From Bean To Cup
+          </h1> */}
+
+
+          <h1>
+            Specialty
+            <span> Cocobreww Coffee </span>
+            From Bean To Cup
           </h1>
 
+
           <p>
-            Experience premium instant coffee, freeze dried blends,
-            agglomerated coffee and refreshing tea beverages crafted
-            with innovation and excellence.
+           Discover our signature blends, made with the finest ingredients for a rich, smooth, and fresh taste every time.
           </p>
 
           <div className="hero-buttons">
