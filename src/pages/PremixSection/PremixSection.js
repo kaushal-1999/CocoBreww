@@ -81,7 +81,7 @@ const PremixSection = () => {
                     <div className="premix-card">
                         <FaSnowflake />
 
-                        <h3>Cold Beverages</h3>
+                        <h3>Iced Tea Powder</h3>
 
                         <p>
                             Refreshing cold coffee &

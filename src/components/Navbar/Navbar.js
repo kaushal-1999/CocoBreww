@@ -29,9 +29,11 @@ const Navbar = () => {
                     <ul className="navbar-links">
                         <li><a href="/">Home</a></li>
                         <li><a href="/about">About</a></li>
-                        {/* <li><a href="#coffee">Coffee</a></li>
-                        <li><a href="#tea">Tea & Brew</a></li> */}
+                        <li><a href="/infrastructure">Infrastructure</a></li>
+                        <li><a href="/gallery">Gallery</a></li>
+                        <li><a href="/packaging">Packaging</a></li>
                         <li><a href="/products">Products</a></li>
+                        <li><a href="/Order">Order</a></li>
                         <li><a href="/contact">Contact</a></li>
                     </ul>
 
@@ -57,11 +59,12 @@ const Navbar = () => {
             <div className={`mobile-menu ${menuOpen ? 'show-mobile-menu' : ''}`}>
                 <a href="/" onClick={() => setMenuOpen(false)}>Home</a>
                 <a href="/about" onClick={() => setMenuOpen(false)}>About Us</a>
-                {/* <a href="#coffee" onClick={() => setMenuOpen(false)}>Coffee</a>
-                <a href="#tea" onClick={() => setMenuOpen(false)}>Tea & Brew</a> */}
-                <a href="/products" onClick={() => setMenuOpen(false)}>Products</a>
+                <li><a href="/infrastructure">Infrastructure</a></li>
+                <li><a href="/gallery">Gallery</a></li>
+                <li><a href="/packaging">Packaging</a></li>
+                <li><a href="/products">Products</a></li>
+                <li><a href="/Order">Tea & Brew</a></li>
                 <a href="/contact" onClick={() => setMenuOpen(false)}>Contact</a>
-
                 <a href="tel:+919699587827" className="mobile-contact-btn">
                     +91 96995 87827
                 </a>
