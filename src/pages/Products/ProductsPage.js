@@ -273,7 +273,7 @@ const ProductsPage = () => {
               <div className="modal-buttons">
 
                 <a
-                  href="https://wa.me/919273873173"
+                  href="https://wa.me/9699587827"
                   target="_blank"
                   rel="noreferrer"
                   className="whatsapp-btn"

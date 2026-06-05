@@ -134,7 +134,7 @@ const ContactSection = () => {
 
                     {/* WHATSAPP BUTTON BELOW */}
                     <a
-                        href="https://wa.me/919273873173"
+                        href="https://wa.me/9699587827"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="whatsapp-btn form-whatsapp-btn"
