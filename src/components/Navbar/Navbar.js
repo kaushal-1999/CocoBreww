@@ -59,11 +59,11 @@ const Navbar = () => {
             <div className={`mobile-menu ${menuOpen ? 'show-mobile-menu' : ''}`}>
                 <a href="/" onClick={() => setMenuOpen(false)}>Home</a>
                 <a href="/about" onClick={() => setMenuOpen(false)}>About Us</a>
-                <li><a href="/infrastructure">Infrastructure</a></li>
-                <li><a href="/gallery">Gallery</a></li>
-                <li><a href="/packaging">Packaging</a></li>
-                <li><a href="/products">Products</a></li>
-                <li><a href="/Order">Tea & Brew</a></li>
+                <a href="/infrastructure">Infrastructure</a>
+                <a href="/gallery">Gallery</a>
+                <a href="/packaging">Packaging</a>
+                <a href="/products">Products</a>
+                <a href="/Order">Tea & Brew</a>
                 <a href="/contact" onClick={() => setMenuOpen(false)}>Contact</a>
                 <a href="tel:+919699587827" className="mobile-contact-btn">
                     +91 96995 87827

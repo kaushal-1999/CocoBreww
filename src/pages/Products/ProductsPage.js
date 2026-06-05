@@ -11,7 +11,7 @@ import coffee3 from "../../assets/products/coffee3.jpeg";
 import coffee4 from "../../assets/products/coffee4.jpeg";
 
 // Tea Images
-import tea1 from "../../assets/products/tea1.jpg";
+import tea1 from "../../assets/products/tea1.jpeg";
 import tea2 from "../../assets/products/tea2.jpeg";
 import tea3 from "../../assets/products/tea3.jpeg";
 import tea4 from "../../assets/products/tea4.jpeg";
