@@ -84,7 +84,7 @@ const Navbar = () => {
 
                         </li>
                         <li>
-                            <Link to="/order">
+                            <Link to="/under-process">
                                 Order
                             </Link>
                         </li>
@@ -197,7 +197,7 @@ const Navbar = () => {
                 </div>
 
                 <Link
-                    to="/order"
+                    to="/under-process"
                     onClick={closeMobileMenu}
                 >
                     Order

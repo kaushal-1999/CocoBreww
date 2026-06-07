@@ -17,6 +17,7 @@ import TeaPage from "./pages/Products/TeaPage";
 import Infrastructure from "./pages/InfrastructurePage/Infrastructure";
 import GalleryPage from "./pages/InfrastructurePage/GalleryPage";
 import PackagingPage from "./pages/InfrastructurePage/PackagingPage";
+import Underprosess from "./pages/UnderProcess/UnderProgress";
 
 function App() {
   return (
@@ -70,6 +71,11 @@ function App() {
             element={<PackagingPage />}
           />
 
+      {/* Order */}
+          <Route
+            path="under-process"
+            element={<Underprosess />}
+          />
           {/* CONTACT */}
           <Route
             path="contact"
