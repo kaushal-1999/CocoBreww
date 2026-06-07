@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.infra-page {
+    background: #0f0a07;
+    overflow: hidden;
+}
+
+/* HERO */
+
+.infra-hero {
+    height: 100vh;
+    background: url("https://images.unsplash.com/photo-1511920170033-f8396924c348");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.infra-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, .75);
+}
+
+.infra-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    padding: 20px;
+}
+
+.infra-hero-content span {
+    color: #ffb347;
+    letter-spacing: 3px;
+}
+
+.infra-hero-content h1 {
+    font-size: 5rem;
+    color: white;
+    margin: 20px 0;
+    line-height: 1.1;
+}
+
+.infra-hero-content p {
+    color: #d7c6bb;
+    line-height: 1.9;
+}
+
+/* INTRO */
+
+.infra-intro {
+    padding: 120px 8%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.infra-image img {
+    width: 100%;
+    border-radius: 30px;
+    height: 600px;
+    object-fit: cover;
+    transition: .5s;
+}
+
+.infra-image:hover img {
+    transform: scale(1.05);
+}
+
+.infra-content span {
+    color: #ffb347;
+}
+
+.infra-content h2 {
+    color: white;
+    font-size: 3rem;
+    margin: 20px 0;
+}
+
+.infra-content p {
+    color: #cdb9ab;
+    line-height: 1.9;
+}
+
+.infra-cards {
+    display: flex;
+    gap: 20px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.infra-card {
+    flex: 1;
+    min-width: 220px;
+    padding: 30px;
+    background: rgba(255, 255, 255, .05);
+    border: 1px solid rgba(255, 255, 255, .08);
+    border-radius: 25px;
+    text-align: center;
+    transition: .4s;
+}
+
+.infra-card:hover {
+    transform: translateY(-10px);
+}
+
+.infra-card svg {
+    font-size: 2rem;
+    color: #ff9d00;
+    margin-bottom: 15px;
+}
+
+.infra-card h4 {
+    color: white;
+}
+
+/* GRID */
+
+.infra-grid-section {
+    padding: 0 8% 120px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.infra-grid-card {
+    background: #18110c;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.infra-grid-card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.infra-grid-content {
+    padding: 30px;
+}
+
+.infra-grid-content svg {
+    font-size: 2rem;
+    color: #ff9d00;
+    margin-bottom: 15px;
+}
+
+.infra-grid-content h3 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.infra-grid-content p {
+    color: #cdb9ab;
+    line-height: 1.8;
+}
+
+/* STATS */
+
+.infra-stats {
+    padding: 100px 8%;
+    background: #16100b;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+}
+
+.stat-box h2 {
+    font-size: 3rem;
+    color: #ff9d00;
+}
+
+.stat-box p {
+    color: #d7c6bb;
+    margin-top: 10px;
+}
+
+/* FULL IMAGE */
+
+.infra-full-image {
+    height: 600px;
+    position: relative;
+}
+
+.infra-full-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.infra-full-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, .65);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.infra-full-overlay h2 {
+    color: white;
+    font-size: 3rem;
+    max-width: 800px;
+}
+
+.infra-full-overlay p {
+    color: #d7c6bb;
+    margin-top: 20px;
+    max-width: 650px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:991px) {
+
+    .infra-intro,
+    .infra-grid-section {
+        grid-template-columns: 1fr;
+    }
+
+    .infra-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+
+    .infra-hero-content h1 {
+        font-size: 3.5rem;
+    }
+}
+
+@media(max-width:768px) {
+
+    .infra-hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .infra-content h2,
+    .infra-full-overlay h2 {
+        font-size: 2rem;
+    }
+
+    .infra-image img {
+        height: 400px;
+    }
+
+    .infra-stats {
+        grid-template-columns: 1fr;
+    }
+}

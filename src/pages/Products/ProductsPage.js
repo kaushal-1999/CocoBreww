@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./ProductsPage.css";
 import { FaWhatsapp } from "react-icons/fa";
 
-import productvid from "../../assets/products/videoprpducts.mp4";
+import productvid from "../../assets/videos/videoprpducts.mp4";
 
 // Coffee Images
 import coffee1 from "../../assets/products/coffee1.jpeg";
