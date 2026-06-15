@@ -190,23 +190,63 @@
 
 /* ================= VARIANTS ================= */
 
+/* ================= VARIANTS ================= */
+
 .coffee-variant-title {
-    margin-top: 25px;
-    margin-bottom: 15px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    color: #ffb347;
+    font-weight: 600;
 }
 
 .coffee-variant-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 12px;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 15px;
 }
 
 .coffee-variant-card {
-    padding: 12px;
-    text-align: center;
-    border-radius: 12px;
-    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 15px 18px;
+
+    background: rgba(255, 255, 255, 0.06);
+
     border: 1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 16px;
+
+    color: white;
+
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    transition: all 0.35s ease;
+
+    cursor: pointer;
+}
+
+.coffee-variant-card:hover {
+    transform: translateY(-6px);
+    border-color: #ff9d00;
+    box-shadow: 0 15px 30px rgba(255, 157, 0, 0.25);
+    background: rgba(255, 157, 0, 0.08);
+}
+
+.variant-icon {
+    font-size: 20px;
+    color: #ff9d00;
+    flex-shrink: 0;
+}
+
+.coffee-variant-card span {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #f3ece7;
 }
 
 /* ================= MODAL BUTTONS ================= */
@@ -275,5 +315,255 @@
 
     .coffee-hero-content h1 {
         font-size: 2.5rem;
+    }
+}
+
+
+/* ================= PAGE LOAD ANIMATIONS ================= */
+
+.coffee-hero-content span {
+    animation: fadeDown 1s ease forwards;
+}
+
+.coffee-hero-content h1 {
+    opacity: 0;
+    animation: fadeUp 1.2s ease forwards;
+    animation-delay: .3s;
+}
+
+.coffee-hero-content p {
+    opacity: 0;
+    animation: fadeUp 1.2s ease forwards;
+    animation-delay: .6s;
+}
+
+/* ================= PRODUCT CARDS ================= */
+
+.coffee-card {
+    opacity: 0;
+    transform: translateY(80px);
+    animation: cardReveal 1s ease forwards;
+}
+
+.coffee-card:nth-child(1) {
+    animation-delay: .1s;
+}
+
+.coffee-card:nth-child(2) {
+    animation-delay: .2s;
+}
+
+.coffee-card:nth-child(3) {
+    animation-delay: .3s;
+}
+
+.coffee-card:nth-child(4) {
+    animation-delay: .4s;
+}
+
+.coffee-card:hover {
+    transform: translateY(-12px) scale(1.03);
+    box-shadow: 0 25px 50px rgba(255, 157, 0, .25);
+}
+
+.coffee-content h3 {
+    transition: .4s;
+}
+
+.coffee-card:hover .coffee-content h3 {
+    color: #ffb347;
+}
+
+/* ================= BUTTONS ================= */
+
+.coffee-content button,
+.coffee-whatsapp,
+.coffee-close-btn {
+    transition: .4s;
+}
+
+.coffee-content button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(255, 157, 0, .4);
+}
+
+.coffee-whatsapp:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(37, 211, 102, .4);
+}
+
+.coffee-close-btn:hover {
+    background: #444;
+    transform: translateY(-4px);
+}
+
+/* ================= MODAL ================= */
+
+.coffee-modal-overlay {
+    animation: modalFade .4s ease;
+}
+
+.coffee-modal {
+    animation: modalScale .5s ease;
+}
+
+.coffee-modal-img img {
+    animation: imageFloat 5s ease-in-out infinite;
+}
+
+.coffee-modal-header h2 {
+    animation: fadeLeft .8s ease;
+}
+
+.coffee-description {
+    animation: fadeRight .9s ease;
+}
+
+/* ================= VARIANTS ================= */
+
+.coffee-variant-card {
+    animation: fadeUp .6s ease;
+}
+
+.coffee-variant-card:hover .variant-icon {
+    animation: shake .6s ease;
+}
+
+/* ================= TITLE ================= */
+
+.coffee-title {
+    position: relative;
+}
+
+.coffee-title::after {
+    content: "";
+    width: 120px;
+    height: 4px;
+    background: linear-gradient(90deg,#ffb347,#ff6a00);
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+}
+
+/* ================= KEYFRAMES ================= */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-60px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeRight {
+    from {
+        opacity: 0;
+        transform: translateX(60px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes cardReveal {
+    from {
+        opacity: 0;
+        transform: translateY(80px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes modalFade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes modalScale {
+    from {
+        opacity: 0;
+        transform: scale(.85);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes imageFloat {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes shake {
+
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(-10deg);
+    }
+
+    50% {
+        transform: rotate(10deg);
+    }
+
+    75% {
+        transform: rotate(-10deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
     }
 }
