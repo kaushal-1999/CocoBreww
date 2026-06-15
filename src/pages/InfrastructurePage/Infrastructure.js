@@ -7,7 +7,7 @@ import {
     FaBoxes,
 } from "react-icons/fa";
 
-import infra1 from "../../assets/imges/infra1.jpg";
+import infra1 from "../../assets/imges/infra1.jpeg";
 import infra2 from "../../assets/imges/infra2.jpg";
 import infra3 from "../../assets/imges/infra3.jpg";
 import infra4 from "../../assets/imges/infra4.jpg";
