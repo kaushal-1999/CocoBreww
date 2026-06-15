@@ -1,54 +1,130 @@
-import React from 'react';
-import './AboutSection.css';
-import { FaCoffee, FaAward, FaLeaf } from 'react-icons/fa';
+import React from "react";
+import "./AboutSection.css";
+
+import {
+  FaCoffee,
+  FaAward,
+  FaLeaf,
+  FaGlobe,
+  FaRocket,
+  FaUsers
+} from "react-icons/fa";
+
 const AboutSection = () => {
-    return (
-        <section className="about-section" id="about">
-            <div className="about-container">
-                <div className="about-left">
-                    <span className="section-tag">About Cocobrew</span>
-                    <h2>
-                        Premium Coffee Crafted With Quality & Innovation
-                    </h2>
-                    <p>
-                        Cocobrew Foods and Beverage company established in 2022 with
-                        a mission to deliver premium-quality coffee and beverages.
-                    </p>
-                    <div className="about-features">
-                        <div className="feature-card">
-                            <FaCoffee />
-                            <div>
-                                <h4>Premium Coffee</h4>
-                                <span>International Quality</span>
-                            </div>
-                        </div>
-                        <div className="feature-card">
-                            <FaLeaf />
-                            <div>
-                                <h4>Natural Taste</h4>
-                                <span>Fresh Aroma & Flavor</span>
-                            </div>
-                        </div>
-                        <div className="feature-card">
-                            <FaAward />
-                            <div>
-                                <h4>Trusted Brand</h4>
-                                <span>Innovation & Excellence</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="about-right">
-                    <div className="about-box glow-box">
-                        <h3>Our Vision</h3>
-                        <p>
-                            To become a leading FMCG organization delivering innovative
-                            and affordable beverages globally.
-                        </p>
-                    </div>
-                </div>
+  return (
+    <section className="about-section" id="about">
+
+      <div className="about-glow glow-1"></div>
+      <div className="about-glow glow-2"></div>
+
+      <div className="about-container">
+
+        {/* LEFT */}
+        <div className="about-content">
+
+          <span className="section-tag">
+            About Cocobreww
+          </span>
+
+          <h2>
+            Crafting Premium Coffee
+            <span> Experiences </span>
+            For Modern Consumers
+          </h2>
+
+          <p>
+            Established in 2023, Cocobreww Foods & Beverages is committed
+            to delivering premium-quality coffee products with innovation,
+            exceptional taste, and global standards.
+          </p>
+
+          {/* <div className="about-stats">
+
+            <div className="stat-card">
+              <h3>25+</h3>
+              <span>Products</span>
             </div>
-        </section>
-    )
-}
-export default AboutSection
+
+            <div className="stat-card">
+              <h3>100%</h3>
+              <span>Arabica Blend</span>
+            </div>
+
+            <div className="stat-card">
+              <h3>2022</h3>
+              <span>Founded</span>
+            </div>
+
+          </div> */}
+
+        </div>
+
+        {/* RIGHT */}
+        <div className="about-grid">
+
+          <div className="glass-card">
+            <FaCoffee />
+            <h3>Premium Coffee</h3>
+            <p>
+              Carefully selected coffee beans processed with
+              advanced techniques for superior flavor.
+            </p>
+          </div>
+
+          <div className="glass-card">
+            <FaLeaf />
+            <h3>Natural Taste</h3>
+            <p>
+              Fresh aroma and authentic coffee taste in every cup.
+            </p>
+          </div>
+
+          <div className="glass-card">
+            <FaAward />
+            <h3>Quality First</h3>
+            <p>
+              Every product follows strict quality standards.
+            </p>
+          </div>
+
+          <div className="glass-card">
+            <FaGlobe />
+            <h3>Global Vision</h3>
+            <p>
+              Expanding premium coffee experiences across markets.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+      {/* Vision Section */}
+
+      <div className="vision-wrapper">
+
+        <div className="vision-card">
+          <FaRocket />
+          <h3>Our Vision</h3>
+          <p>
+            To become a leading FMCG company delivering innovative,
+            affordable and world-class beverage experiences.
+          </p>
+        </div>
+
+        <div className="vision-card">
+          <FaUsers />
+          <h3>Our Mission</h3>
+          <p>
+            Creating memorable coffee moments through innovation,
+            quality and customer satisfaction.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+  );
+};
+
+export default AboutSection;

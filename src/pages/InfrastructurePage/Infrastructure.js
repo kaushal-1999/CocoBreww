@@ -103,7 +103,7 @@ const Infrastructure = () => {
             <section className="infra-stats">
 
                 <div className="stat-box">
-                    <h2>2022</h2>
+                    <h2>2023</h2>
                     <p>Established</p>
                 </div>
 

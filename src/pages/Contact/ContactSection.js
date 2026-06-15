@@ -26,7 +26,7 @@ const ContactSection = () => {
                     </span>
 
                     <h2>
-                        Get In Touch With Cocobrew
+                        Get In Touch With Cocobreww
                     </h2>
 
                     <p>
@@ -75,7 +75,7 @@ const ContactSection = () => {
                                 <h4>Email</h4>
 
                                 <a href="mailto:cocobrewfoodsandbeverages@gmail.com">
-                                    cocobrewfoodsandbeverages@gmail.com
+                                    cocobrewfoodsandbeveragesllp@gmail.com
                                 </a>
                             </div>
 

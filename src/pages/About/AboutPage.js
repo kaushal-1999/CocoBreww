@@ -26,7 +26,7 @@ export default function AboutPage() {
                     </h1>
 
                     <p>
-                        Established in 2022, CocoBreww Foods & Beverage Company
+                        Established in 2023, CocoBreww Foods & Beverage Company
                         delivers premium coffee experiences crafted with passion,
                         innovation and uncompromising quality.
                     </p>
@@ -53,7 +53,7 @@ export default function AboutPage() {
                     </h2>
 
                     <p>
-                        Established in 2022, CocoBreww Foods & Beverage Company was
+                        Established in 2023, CocoBreww Foods & Beverage Company was
                         founded with a clear vision — crafting premium-quality coffee
                         that meets international standards.
                     </p>
@@ -155,7 +155,7 @@ export default function AboutPage() {
             <section className="cb-stats">
 
                 <div>
-                    <h2>2022</h2>
+                    <h2>2023</h2>
                     <p>Founded</p>
                 </div>
 

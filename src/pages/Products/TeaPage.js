@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./ProductsPage.css";
+import "./TeaPage.css";
 import { FaWhatsapp } from "react-icons/fa";
 
 import productvid from "../../assets/videos/teabackground.mp4";
@@ -16,101 +16,58 @@ import iced4 from "../../assets/products/iced4.jpeg";
 import iced6 from "../../assets/products/iced6.jpeg";
 
 const teaPremixProducts = [
-    {
-        name: "Black Lemon Tea",
-        image: tea1,
-        description: "Perfect blend of black tea and lemon flavor."
-    },
-    {
-        name: "Green Lemon Tea",
-        image: tea2,
-        description: "Refreshing green tea infused with lemon."
-    },
-    {
-        name: "Nimbu Pani",
-        image: tea3,
-        description: "Tangy Indian lemonade for instant refreshment."
-    },
-    {
-        name: "Masala Shikanji",
-        image: tea4,
-        description: "Traditional Indian spicy lemonade."
-    }
+    { name: "Black Lemon Tea", image: tea1, description: "Perfect blend of black tea and lemon flavor." },
+    { name: "Green Lemon Tea", image: tea2, description: "Refreshing green tea infused with lemon." },
+    { name: "Nimbu Pani", image: tea3, description: "Tangy Indian lemonade for instant refreshment." },
+    { name: "Masala Shikanji", image: tea4, description: "Traditional Indian spicy lemonade." }
 ];
 
 const icedTeaProducts = [
-    {
-        name: "Watermelon Iced Tea",
-        image: iced1,
-        description: "Refreshing watermelon flavored iced tea."
-    },
-    {
-        name: "Peach Iced Tea",
-        image: iced2,
-        description: "Premium peach infused iced tea."
-    },
-    {
-        name: "Orange Iced Tea",
-        image: iced3,
-        description: "Tangy orange iced tea blend."
-    },
-    {
-        name: "Mango Iced Tea",
-        image: iced4,
-        description: "Refreshing mango iced tea."
-    },
-    {
-        name: "Chocolate Iced Tea",
-        image: iced6,
-        description: "Rich chocolate flavored iced tea."
-    }
+    { name: "Watermelon Iced Tea", image: iced1, description: "Refreshing watermelon flavored iced tea." },
+    { name: "Peach Iced Tea", image: iced2, description: "Premium peach infused iced tea." },
+    { name: "Orange Iced Tea", image: iced3, description: "Tangy orange iced tea blend." },
+    { name: "Mango Iced Tea", image: iced4, description: "Refreshing mango iced tea." },
+    { name: "Chocolate Iced Tea", image: iced6, description: "Rich chocolate flavored iced tea." }
 ];
 
 const TeaPage = () => {
     const [selectedProduct, setSelectedProduct] = useState(null);
 
     return (
-        <div className="products-page">
+        <div className="tea-page">
 
-            <section className="products-hero">
-                <video autoPlay muted loop playsInline className="hero-video">
+            {/* HERO */}
+            <section className="tea-hero">
+                <video autoPlay muted loop playsInline className="tea-hero-video">
                     <source src={productvid} type="video/mp4" />
                 </video>
 
-                <div className="hero-overlay"></div>
+                <div className="tea-hero-overlay"></div>
 
-                <div className="hero-content">
+                <div className="tea-hero-content">
                     <span>COCOBREWW TEA COLLECTION</span>
-
                     <h1>
-                        Tea &
-                        <br />
-                        Iced Tea Collection
+                        Tea & <br /> Iced Tea Collection
                     </h1>
-
-                    <p>
-                        Refreshing beverages crafted for modern consumers.
-                    </p>
+                    <p>Refreshing beverages crafted for modern consumers.</p>
                 </div>
             </section>
 
-            <section className="product-section">
-                <h2 className="section-title">
-                    Tea Premix
-                </h2>
+            {/* TEA SECTION */}
+            <section className="tea-section">
+                <h2 className="tea-title">Tea Premix</h2>
 
-                <div className="product-grid">
+                <div className="tea-grid">
                     {teaPremixProducts.map((product, index) => (
                         <div
                             key={index}
-                            className="product-card"
+                            className="tea-card"
                             onClick={() => setSelectedProduct(product)}
                         >
-                            <div className="product-image">
+                            <div className="tea-img">
                                 <img src={product.image} alt={product.name} />
                             </div>
-
-                            <div className="product-content">
+                            <div className="tea-content">
                                 <h3>{product.name}</h3>
                                 <button>View Details</button>
                             </div>
@@ -119,23 +76,21 @@ const TeaPage = () => {
                 </div>
             </section>
 
-            <section className="product-section">
-                <h2 className="section-title">
-                    Iced Tea
-                </h2>
+            {/* ICED TEA SECTION */}
+            <section className="tea-section">
+                <h2 className="tea-title">Iced Tea</h2>
 
-                <div className="product-grid">
+                <div className="tea-grid">
                     {icedTeaProducts.map((product, index) => (
                         <div
                             key={index}
-                            className="product-card"
+                            className="tea-card"
                             onClick={() => setSelectedProduct(product)}
                         >
-                            <div className="product-image">
+                            <div className="tea-img">
                                 <img src={product.image} alt={product.name} />
                             </div>
-
-                            <div className="product-content">
+                            <div className="tea-content">
                                 <h3>{product.name}</h3>
                                 <button>View Details</button>
                             </div>
@@ -144,57 +99,48 @@ const TeaPage = () => {
                 </div>
             </section>
 
+            {/* MODAL */}
             {selectedProduct && (
-                <div
-                    className="product-modal-overlay"
-                    onClick={() => setSelectedProduct(null)}
-                >
-                    <div
-                        className="product-modal"
-                        onClick={(e) => e.stopPropagation()}
-                    >
+                <div className="tea-modal-overlay" onClick={() => setSelectedProduct(null)}>
+                    <div className="tea-modal" onClick={(e) => e.stopPropagation()}>
+
                         <button
-                            className="close-modal"
+                            className="tea-close"
                             onClick={() => setSelectedProduct(null)}
                         >
                             ✕
                         </button>
 
-                        <div className="modal-image">
-                            <img
-                                src={selectedProduct.image}
-                                alt={selectedProduct.name}
-                            />
+                        <div className="tea-modal-img">
+                            <img src={selectedProduct.image} alt={selectedProduct.name} />
                         </div>
 
-                        <div className="modal-content">
-
+                        <div className="tea-modal-content">
                             <h2>{selectedProduct.name}</h2>
+                            <p>{selectedProduct.description}</p>
 
-                            <p className="modal-description">
-                                {selectedProduct.description}
-                            </p>
+                            <div className="tea-modal-buttons">
 
-                            <div className="modal-buttons">
                                 <a
                                     href="https://wa.me/919699587827"
                                     target="_blank"
                                     rel="noreferrer"
-                                    className="whatsapp-btn"
+                                    className="tea-whatsapp"
                                 >
                                     <FaWhatsapp />
                                     Enquire Now
                                 </a>
 
                                 <button
-                                    className="close-btn-bottom"
+                                    className="tea-close-btn"
                                     onClick={() => setSelectedProduct(null)}
                                 >
                                     Close
                                 </button>
-                            </div>
 
+                            </div>
                         </div>
+
                     </div>
                 </div>
             )}

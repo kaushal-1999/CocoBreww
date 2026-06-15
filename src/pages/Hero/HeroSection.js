@@ -7,79 +7,69 @@ import {
   FaCoffee,
 } from 'react-icons/fa';
 
-import HeroCoffee from '../../assets/imges/coffeepack.png';
+import HeroVideo from '../../assets/videos/herovid.mp4';
 
 const HeroSection = () => {
   return (
-    <section className="hero-section" id="home">
+    <section className="cb-hero" id="home">
 
-      {/* Background Glow */}
-      <div className="hero-glow hero-glow-1"></div>
-      <div className="hero-glow hero-glow-2"></div>
+      {/* Glow */}
+      <div className="cb-hero__glow cb-glow-1"></div>
+      <div className="cb-hero__glow cb-glow-2"></div>
 
-      {/* Floating Elements */}
-      <div className="floating-bean bean-1"></div>
-      <div className="floating-bean bean-2"></div>
-      <div className="floating-bean bean-3"></div>
+      {/* Floating beans */}
+      <div className="cb-hero__bean cb-bean-1"></div>
+      <div className="cb-hero__bean cb-bean-2"></div>
+      <div className="cb-hero__bean cb-bean-3"></div>
 
-      <div className="hero-container">
+      <div className="cb-hero__container">
 
-        {/* Left Content */}
-        <div className="hero-left">
+        {/* LEFT */}
+        <div className="cb-hero__left">
 
-          <div className="hero-badge">
+          <div className="cb-hero__badge">
             <FaCoffee />
-            <span>Premium Coffee Since 2022</span>
+            <span>Premium Coffee Since 2023</span>
           </div>
-          {/* <h1>
-            Crafting Quality
-            <span> Coffee </span>
-            From Bean To Cup
-          </h1> */}
 
-
-          <h1>
-            Specialty
-            <span> Cocobreww Coffee </span>
-            From Bean To Cup
+          <h1 className="cb-hero__title">
+            Specialty <span>Cocobreww Coffee</span> From Bean To Cup
           </h1>
 
-
-          <p>
-           Discover our signature blends, made with the finest ingredients for a rich, smooth, and fresh taste every time.
+          <p className="cb-hero__desc">
+            Discover our signature blends, made with the finest ingredients for
+            a rich, smooth, and fresh taste every time.
           </p>
 
-          <div className="hero-buttons">
+          <div className="cb-hero__buttons">
 
-            <button className="primary-btn">
-              <a href="/products" style={{ textDecoration: 'none', color: 'inherit' }}>
-                Explore Products
-              </a>
+            <button className="cb-btn cb-btn-primary">
+              <a href="/products">Explore Products</a>
               <FaArrowRight />
             </button>
 
-            <button className="secondary-btn">
+            <button className="cb-btn cb-btn-secondary">
               <FaPlay />
               Watch Story
             </button>
 
           </div>
 
-          {/* Stats */}
-          <div className="hero-stats">
+          {/* STATS */}
+          <div className="cb-hero__stats">
 
-            <div className="stat-box">
+            <div className="cb-stat">
               <h2>25+</h2>
               <span>Premium Products</span>
             </div>
 
-            <div className="stat-box">
+            <div className="cb-stat">
               <h2>100%</h2>
               <span>Quality Coffee</span>
             </div>
 
-            <div className="stat-box">
-              <h2>2022</h2>
+            <div className="cb-stat">
+              <h2>2023</h2>
               <span>Established</span>
             </div>
 
@@ -87,23 +77,27 @@ const HeroSection = () => {
 
         </div>
 
-        {/* Right Image */}
-        <div className="hero-right">
+        {/* RIGHT */}
+        <div className="cb-hero__right">
 
-          <div className="image-circle"></div>
+          <div className="cb-circle"></div>
 
-          <img
-            src={HeroCoffee}
-            alt="CocoBrew Coffee"
-            className="hero-image"
-          />
+          <video
+            className="cb-hero__video"
+            autoPlay
+            muted
+            loop
+            playsInline
+          >
+            <source src={HeroVideo} type="video/mp4" />
+          </video>
 
-          <div className="floating-card card-1">
+          <div className="cb-card cb-card-1">
             <h4>Freeze Dried</h4>
             <p>Premium Blend</p>
           </div>
 
-          <div className="floating-card card-2">
+          <div className="cb-card cb-card-2">
             <h4>100% Arabica</h4>
             <p>Pure Coffee</p>
           </div>

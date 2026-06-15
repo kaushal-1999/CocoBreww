@@ -27,7 +27,7 @@ const Footer = () => {
             </div>
 
             <div>
-              <h2>COCOBREW</h2>
+              <h2>COCOBREWw</h2>
               <span>Premium Coffee & Beverages</span>
             </div>
           </div>
@@ -91,7 +91,7 @@ const Footer = () => {
           </a>
 
           <a href="mailto:cocobrewfoodsandbeverages@gmail.com">
-            cocobrewfoodsandbeverages@gmail.com
+            cocobrewfoodsandbeveragesllp@gmail.com
           </a>
 
           <button
@@ -112,7 +112,7 @@ const Footer = () => {
       {/* Bottom */}
       <div className="footer-bottom">
         <p>
-          © 2026 Cocobrew Foods & Beverages. All Rights Reserved.
+          © 2026 Cocobreww Foods & Beverages. All Rights Reserved.
         </p>
 
         <h4>
