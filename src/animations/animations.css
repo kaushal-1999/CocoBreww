@@ -1,0 +1,169 @@
+/* ================= BASE SYSTEM ================= */
+
+.a {
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: transform, opacity;
+}
+
+/* ================= SCROLL ACTIVE ================= */
+
+.a.active {
+    opacity: 1;
+    transform: translate(0, 0) scale(1) rotate(0deg);
+}
+
+/* ================= ENTRY TYPES ================= */
+
+/* Fade Up */
+.a-up {
+    transform: translateY(60px);
+}
+
+/* Fade Down */
+.a-down {
+    transform: translateY(-60px);
+}
+
+/* Fade Left */
+.a-left {
+    transform: translateX(-80px);
+}
+
+/* Fade Right */
+.a-right {
+    transform: translateX(80px);
+}
+
+/* Scale */
+.a-scale {
+    transform: scale(0.85);
+}
+
+/* Rotate */
+.a-rotate {
+    transform: rotate(-10deg) scale(0.9);
+}
+
+/* ================= HOVER EFFECTS ================= */
+
+.h {
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+.h:hover {
+    transform: translateY(-8px) scale(1.03);
+}
+
+.h-glow:hover {
+    box-shadow: 0 20px 40px rgba(255, 157, 0, 0.25);
+}
+
+.h-zoom:hover img {
+    transform: scale(1.1);
+}
+
+.h-tilt:hover {
+    transform: perspective(600px) rotateX(5deg) rotateY(5deg);
+}
+
+/* ================= STAGGER SYSTEM ================= */
+
+.d1 {
+    transition-delay: 0.1s;
+}
+
+.d2 {
+    transition-delay: 0.2s;
+}
+
+.d3 {
+    transition-delay: 0.3s;
+}
+
+.d4 {
+    transition-delay: 0.4s;
+}
+
+.d5 {
+    transition-delay: 0.5s;
+}
+
+/* ================= PAGE LOAD ================= */
+
+@keyframes pageFade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.page {
+    animation: pageFade 0.8s ease;
+}
+
+/* ================= FLOAT ANIMATION ================= */
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.float {
+    animation: float 4s ease-in-out infinite;
+}
+
+/* ================= TEXT EFFECTS ================= */
+
+@keyframes shine {
+    0% {
+        background-position: 0%;
+    }
+
+    100% {
+        background-position: 200%;
+    }
+}
+
+.shine {
+    background: linear-gradient(90deg, #fff, #ffb347, #fff);
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 4s linear infinite;
+}
+
+/* ================= MODAL ANIMATION ================= */
+
+.modal {
+    animation: modalPop 0.35s ease;
+}
+
+@keyframes modalPop {
+    from {
+        opacity: 0;
+        transform: scale(0.85);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ================= SCROLL SPEED SMOOTH ================= */
+
+html {
+    scroll-behavior: smooth;
+}

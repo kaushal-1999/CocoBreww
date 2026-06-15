@@ -1,8 +1,4 @@
-import {
-  BrowserRouter,
-  Routes,
-  Route
-} from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Layout from "./layout/Layout";
 
@@ -19,71 +15,34 @@ import GalleryPage from "./pages/InfrastructurePage/GalleryPage";
 import PackagingPage from "./pages/InfrastructurePage/PackagingPage";
 import Underprosess from "./pages/UnderProcess/UnderProgress";
 
+// ✅ IMPORTANT: import hook
+import useAnimations from "./hooks/useAnimations";
+
 function App() {
+  // ✅ RUN ONCE GLOBALLY
+  useAnimations();
+
   return (
     <BrowserRouter>
       <Routes>
-
         <Route path="/" element={<Layout />}>
 
-          {/* HOME */}
           <Route index element={<Home />} />
 
-          {/* ABOUT */}
-          <Route
-            path="about"
-            element={<About />}
-          />
+          <Route path="about" element={<About />} />
+          <Route path="products" element={<Products />} />
 
-          {/* PRODUCTS */}
-          <Route
-            path="products"
-            element={<Products />}
-          />
+          <Route path="products/coffee" element={<CoffeePage />} />
+          <Route path="products/tea" element={<TeaPage />} />
 
-          {/* COFFEE */}
-          <Route
-            path="products/coffee"
-            element={<CoffeePage />}
-          />
+          <Route path="infrastructure" element={<Infrastructure />} />
+          <Route path="gallery" element={<GalleryPage />} />
+          <Route path="packaging" element={<PackagingPage />} />
 
-          {/* TEA */}
-          <Route
-            path="products/tea"
-            element={<TeaPage />}
-          />
-
-          {/* INFRASTRUCTURE */}
-          <Route
-            path="infrastructure"
-            element={<Infrastructure />}
-          />
-
-          {/* GALLERY */}
-          <Route
-            path="gallery"
-            element={<GalleryPage />}
-          />
-
-          {/* PACKAGING */}
-          <Route
-            path="packaging"
-            element={<PackagingPage />}
-          />
-
-      {/* Order */}
-          <Route
-            path="under-process"
-            element={<Underprosess />}
-          />
-          {/* CONTACT */}
-          <Route
-            path="contact"
-            element={<Contact />}
-          />
+          <Route path="under-process" element={<Underprosess />} />
+          <Route path="contact" element={<Contact />} />
 
         </Route>
-
       </Routes>
     </BrowserRouter>
   );

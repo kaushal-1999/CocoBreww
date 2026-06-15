@@ -31,7 +31,7 @@ const Navbar = () => {
                         </div>
 
                         <div className="logo-text">
-                            <h2>COCOBREW</h2>
+                            <h2>COCOBREWw</h2>
                             <span>Premium Coffee & Beverages</span>
                         </div>
                     </Link>
